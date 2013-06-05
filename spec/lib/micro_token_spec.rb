@@ -53,6 +53,26 @@ describe MicroToken do
         end
       end
     end
+
+    context 'set to uppercase' do
+      let(:format) { :uppercase }
+
+      23.times do
+        it 'contains only uppercase letters' do
+          expect(subject.split.all? { |c| c =~ /[A-Z]/ }).to be_true
+        end
+      end
+    end
+
+    context 'set to lowercase' do
+      let(:format) { :lowercase }
+
+      23.times do
+        it 'contains only lowercase letters' do
+          expect(subject.split.all? { |c| c =~ /[a-z]/ }).to be_true
+        end
+      end
+    end
   end
 
 end
