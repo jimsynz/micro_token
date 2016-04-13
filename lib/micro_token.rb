@@ -2,11 +2,12 @@ require "micro_token/version"
 require 'securerandom'
 
 module MicroToken
+  EXCLUDE_CHARS = [ "I", "l", "1" ]
   LOWER_ALPHA_CHARS = ('a'..'z').to_a
   UPPER_ALPHA_CHARS = ('A'..'Z').to_a
   NUMERIC_CHARS = (0..9).to_a
-  ALPHA_CHARS = LOWER_ALPHA_CHARS + UPPER_ALPHA_CHARS
-  ALPHANUMERIC_CHARS = ALPHA_CHARS + NUMERIC_CHARS
+  ALPHA_CHARS = LOWER_ALPHA_CHARS + UPPER_ALPHA_CHARS - EXCLUDE_CHARS
+  ALPHANUMERIC_CHARS = ALPHA_CHARS + NUMERIC_CHARS - EXCLUDE_CHARS
 
   class << self
 
