@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["jamesotron@gmail.com"]
   spec.description   = %q{A tiny random token generator}
   spec.summary       = %q{A tiny random token generator}
-  spec.homepage      = "https://github.com/jamesotron/micro_token"
+  spec.homepage      = "https://github.com/oshpark/micro_token"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
