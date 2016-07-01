@@ -29,7 +29,7 @@ describe MicroToken do
 
       23.times do
         it 'contains only alphanumeric characters' do
-          expect(subject.split.all? { |c| c =~ /[a-zA-Z0-9]/ }).to be_true
+          expect(subject.split.all? { |c| c =~ /[a-zA-Z0-9]/ }).to be_truthy
         end
       end
     end
@@ -39,7 +39,7 @@ describe MicroToken do
 
       23.times do
         it 'contains only numerals' do
-          expect(subject.split.all? { |c| c =~ /[0-9]/ }).to be_true
+          expect(subject.split.all? { |c| c =~ /[0-9]/ }).to be_truthy
         end
       end
     end
@@ -49,7 +49,7 @@ describe MicroToken do
 
       23.times do
         it 'contains only letters' do
-          expect(subject.split.all? { |c| c =~ /[a-zA-Z]/ }).to be_true
+          expect(subject.split.all? { |c| c =~ /[a-zA-Z]/ }).to be_truthy
         end
       end
     end
@@ -59,7 +59,7 @@ describe MicroToken do
 
       23.times do
         it 'contains only uppercase letters' do
-          expect(subject.split.all? { |c| c =~ /[A-Z]/ }).to be_true
+          expect(subject.split.all? { |c| c =~ /[A-Z]/ }).to be_truthy
         end
       end
     end
@@ -69,7 +69,7 @@ describe MicroToken do
 
       23.times do
         it 'contains only lowercase letters' do
-          expect(subject.split.all? { |c| c =~ /[a-z]/ }).to be_true
+          expect(subject.split.all? { |c| c =~ /[a-z]/ }).to be_truthy
         end
       end
     end
