@@ -1,9 +1,7 @@
 require 'micro_token'
 
 describe MicroToken do
-
   describe '#generate' do
-
     context 'with length' do
       context 'set to 12' do
         let(:length) { 12 }
@@ -22,7 +20,7 @@ describe MicroToken do
   end
 
   context 'with format' do
-    subject { MicroToken.generate(8,format) }
+    subject { MicroToken.generate(80, format) }
 
     context 'set to alphanumeric' do
       let(:format) { :alphanumeric }
@@ -73,6 +71,15 @@ describe MicroToken do
         end
       end
     end
-  end
 
+    context 'set to distinct' do
+      let(:format) { :distinct }
+
+      23.times do
+        it "doesn't contain visually similar characters" do
+          expect(subject.split.all? { |c| c =~ /[Il10O]/ }).to be_falsy
+        end
+      end
+    end
+  end
 end
